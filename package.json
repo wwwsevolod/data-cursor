@@ -1,0 +1,55 @@
+{
+  "name": "data-cursor",
+  "version": "0.5.0",
+  "description": "Javascript Library to traverse nested structures and modify in place without mutating data",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "clean": "$(npm bin)/rimraf lib && $(npm bin)/rimraf coverage && mkdir lib && mkdir lib/dom",
+    "test": "NODE_PATH=./src NODE_ENV=test $(npm bin)/_mocha --compilers js:babel-register --require ./testHelper.js --recursive test/**/*.unit.js",
+    "test:cov": "NODE_PATH=./src NODE_ENV=test $(npm bin)/babel-node ./node_modules/isparta/bin/isparta cover --include-all-sources --report text node_modules/mocha/bin/_mocha -- --require ./testHelper.js --recursive test/**/*.unit.js",
+    "test:watch": "npm run test -- --watch",
+    "build:dev": "NODE_ENV=development npm run compile",
+    "build:prod": "NODE_ENV=production npm run compile",
+    "compile": "$(npm bin)/babel src --out-dir lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wwwsevolod/data-cursor.git"
+  },
+  "keywords": [
+    "data",
+    "cursor",
+    "update",
+    "immutable",
+    "POJO",
+    "mutability",
+    "immutability",
+    "helpers"
+  ],
+  "author": "wwwsevolod",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wwwsevolod/data-cursor/issues"
+  },
+  "homepage": "https://github.com/wwwsevolod/data-cursor#readme",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.9.1",
+    "babel-eslint": "^6.0.4",
+    "babel-plugin-transform-class-properties": "^6.10.2",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-1": "^6.5.0",
+    "chai": "^3.5.0",
+    "eslint": "^2.13.0",
+    "eslint-plugin-react": "^5.2.2",
+    "isparta": "^4.0.0",
+    "mocha": "^2.5.3",
+    "rimraf": "^2.5.2"
+  }
+}
