@@ -1,2 +1,2 @@
 
-export getCursor from 'getCursor';
+export getCursor from './getCursor';
