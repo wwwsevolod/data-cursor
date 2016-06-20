@@ -1,5 +1,7 @@
 # data-cursor.js
 
+`npm install --save data-cursor`
+
 ## What is it?
 
 This library is for traversing and modifying nested data structures, without mutating original objects.
