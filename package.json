@@ -1,6 +1,6 @@
 {
   "name": "data-cursor",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Javascript Library to traverse nested structures and modify in place without mutating data",
   "main": "lib/index.js",
   "directories": {
